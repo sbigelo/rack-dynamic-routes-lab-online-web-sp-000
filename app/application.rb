@@ -8,7 +8,8 @@ class Application
       if @@item.empty?
         resp.write "Item not found"
       else
-
+        @@item.each do |items|
+          resp.write "#{items}\n"
         end
     else
       resp.write "3.42 Route not found"
